@@ -3,213 +3,582 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="A website about my favorite places, fruits, vehicles, and classes.">
-    <meta name="keywords" content="Chicago, favorite places, fruits, vehicles, classes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Favorite Things</title>
+    <meta name="description"
+          content="Learn about black mambas, pythons, and anacondas including where they live, what they eat, and how they hunt.">
+
+    <title>Snakes of the World</title>
 
     <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f4f4f4;
-            color: #222;
+            font-family: Arial, sans-serif;
+            background-color: #101410;
+            color: #eeeeee;
+            line-height: 1.6;
         }
 
         header {
-            background-color: rgb(0, 255, 255);
-            padding: 20px;
+            background-color: #172017;
             text-align: center;
+            padding: 55px 20px;
+            border-bottom: 3px solid #59734b;
         }
 
-        h1 {
-            color: red;
+        header h1 {
+            margin: 0;
+            color: #9abe83;
+            font-size: 44px;
+        }
+
+        header p {
+            color: #cccccc;
+            font-size: 18px;
+            margin-top: 10px;
         }
 
         nav {
-            background-color: #333;
-            padding: 12px;
+            background-color: #080b08;
             text-align: center;
+            padding: 17px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 15px;
+            margin: 0 18px;
+            font-weight: bold;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #9abe83;
         }
 
         main {
-            max-width: 900px;
+            max-width: 1050px;
             margin: auto;
-            padding: 20px;
-            background-color: white;
+            padding: 40px 25px;
         }
 
-        section {
-            margin-bottom: 30px;
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 10px auto 60px;
         }
 
-        img {
-            width: 300px;
-            max-width: 100%;
-            height: auto;
+        .intro h2 {
+            color: #9abe83;
+            font-size: 32px;
+        }
+
+        .snake {
+            background-color: #1a211a;
+            margin-bottom: 45px;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #6d8c5b;
+        }
+
+        .snake h2 {
+            margin-top: 0;
+            color: #9abe83;
+            font-size: 30px;
+        }
+
+        .snake h3 {
+            color: #b8d1a7;
+        }
+
+        .snake-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 10px 0 25px;
+            border: 1px solid #465446;
+        }
+
+        .facts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .fact {
+            background-color: #111711;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .fact strong {
+            color: #9abe83;
+        }
+
+        .comparison {
+            margin-top: 60px;
+        }
+
+        .comparison h2 {
+            color: #9abe83;
+            font-size: 30px;
         }
 
         table {
-            border-collapse: collapse;
             width: 100%;
-        }
-
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: left;
+            border-collapse: collapse;
+            background-color: #1a211a;
         }
 
         th {
-            background-color: #dddddd;
+            background-color: #293529;
+            color: #b5d49f;
         }
 
-        form {
-            margin-top: 15px;
+        th, td {
+            padding: 14px;
+            border: 1px solid #4b594b;
+            text-align: left;
         }
 
-        input, select, textarea {
-            margin-top: 5px;
-            margin-bottom: 15px;
-            padding: 8px;
+        .survey {
+            background-color: #1a211a;
+            padding: 30px;
+            margin-top: 55px;
+            border-radius: 8px;
+        }
+
+        .survey h2 {
+            color: #9abe83;
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select,
+        textarea {
             width: 100%;
-            box-sizing: border-box;
+            padding: 11px;
+            background-color: #0d110d;
+            border: 1px solid #596659;
+            color: white;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
         }
 
         input[type="submit"] {
             width: auto;
+            background-color: #668653;
+            border: none;
+            padding: 11px 25px;
+            margin-top: 18px;
             cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #7a9d64;
+        }
+
+        .sources {
+            margin-top: 45px;
+            padding: 25px;
+            background-color: #151b15;
+            border-radius: 8px;
+        }
+
+        .sources h2 {
+            color: #9abe83;
+        }
+
+        .sources a {
+            color: #a9ce91;
         }
 
         footer {
-            background-color: #333;
-            color: white;
             text-align: center;
-            padding: 15px;
+            background-color: #080b08;
+            color: #aaaaaa;
+            padding: 25px;
+            margin-top: 50px;
         }
+
+        @media (max-width: 700px) {
+
+            .facts {
+                grid-template-columns: 1fr;
+            }
+
+            .snake-image {
+                height: 250px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px 9px;
+            }
+
+            header h1 {
+                font-size: 35px;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-<header>
-    <h1>My Favorite Things &#169;</h1>
-    <p>A little about the places and things I enjoy.</p>
+<header id="home">
+    <h1>Snakes of the World</h1>
+    <p>Black mambas, pythons, and anacondas</p>
 </header>
 
+
 <nav>
-    <a href="#places">Places</a>
-    <a href="#fruits">Fruits</a>
-    <a href="#vehicles">Vehicles</a>
-    <a href="#classes">Classes</a>
-    <a href="#form">Survey</a>
+    <a href="#home">Home</a>
+    <a href="#mamba">Black Mamba</a>
+    <a href="#python">Pythons</a>
+    <a href="#anaconda">Anacondas</a>
+    <a href="#comparison">Comparison</a>
+    <a href="#survey">Survey</a>
 </nav>
+
 
 <main>
 
-    <section id="places">
-        <h2>My Favorite Places &#174;</h2>
+<section class="intro">
 
-        <p>
-            I love to travel every chance I get. My most recent trip was to
-            <em>Chicago</em>, <strong>Illinois</strong>. As a part of traveling,
-            I love going to different historical locations exclusive to that place.
-            One place I enjoyed learning about was the
-            <a href="https://www.fieldmuseum.org/" target="_blank">Field Museum in Chicago</a>.
-        </p>
+    <h2>Three Very Different Snakes</h2>
 
-        <img src="Chicago.webp" alt="View of Chicago">
-    </section>
+    <p>
+        Snakes are probably one of the most interesting types of reptiles
+        because of how different they can be from each other. Some use venom,
+        some use their strength, and some spend a lot of their time in water.
+        I picked the black mamba, pythons, and anacondas because they are three
+        snakes that stand out to me the most.
+    </p>
 
-
-    <section id="fruits">
-        <h2>My Favorite Fruits &#8482;</h2>
-
-        <ul style="list-style-type: square;">
-            <li>Apple</li>
-            <li>Grapes</li>
-            <li>Peaches</li>
-        </ul>
-    </section>
+</section>
 
 
-    <section id="vehicles">
-        <h2>My Favorite Vehicles</h2>
+<section class="snake" id="mamba">
 
-        <ol type="A">
-            <li>Bugatti</li>
-            <li>Lamborghini</li>
-            <li>Dodge Charger</li>
-        </ol>
-    </section>
+    <h2>Black Mamba</h2>
+
+    <img
+        class="snake-image"
+        src="https://upload.wikimedia.org/wikipedia/commons/7/76/Dendroaspis_polylepis_%2814%29.jpg"
+        alt="Black mamba snake">
+
+    <p>
+        The black mamba is one of the snakes I find the most interesting.
+        Something I didn't know before is that the name is kind of misleading.
+        Black mambas aren't actually black on the outside. Their skin is
+        normally more gray, brown, or olive colored. The dark color inside
+        of their mouth is where the "black" part of the name comes from.
+    </p>
+
+    <div class="facts">
+
+        <div class="fact">
+            <strong>Location</strong><br>
+            Eastern and southern Africa
+        </div>
+
+        <div class="fact">
+            <strong>Type</strong><br>
+            Venomous
+        </div>
+
+        <div class="fact">
+            <strong>Diet</strong><br>
+            Small animals
+        </div>
+
+    </div>
+
+    <h3>How They Hunt</h3>
+
+    <p>
+        Unlike pythons and anacondas, a black mamba doesn't need to wrap
+        around its prey. It uses venom instead. Black mambas have fangs
+        toward the front of their mouth that are used to deliver venom
+        when they bite their prey.
+    </p>
+
+    <h3>Where They Live</h3>
+
+    <p>
+        Black mambas are found in parts of eastern and southern Africa.
+        They can spend time both on the ground and around trees while
+        looking for prey and shelter.
+    </p>
+
+</section>
 
 
-    <section id="classes">
-        <h2>My Classes</h2>
+<section class="snake" id="python">
 
-        <table>
-            <tr>
-                <th>Days</th>
-                <th>Class</th>
-            </tr>
+    <h2>Pythons</h2>
 
-            <tr>
-                <td>Mon, Wed</td>
-                <td>Website Development</td>
-            </tr>
+    <img
+        class="snake-image"
+        src="https://upload.wikimedia.org/wikipedia/commons/3/32/Python_molurus_molurus_2.jpg"
+        alt="Python snake">
 
-            <tr>
-                <td>Tues, Thurs</td>
-                <td>Software Development</td>
-            </tr>
-        </table>
-    </section>
+    <p>
+        Pythons are completely different from the black mamba because they
+        aren't venomous. Instead they rely on their size and strength.
+        There are a lot of different python species, so they don't all look
+        or act exactly the same.
+    </p>
+
+    <div class="facts">
+
+        <div class="fact">
+            <strong>Location</strong><br>
+            Africa, Asia, and Australia
+        </div>
+
+        <div class="fact">
+            <strong>Type</strong><br>
+            Nonvenomous constrictor
+        </div>
+
+        <div class="fact">
+            <strong>Diet</strong><br>
+            Birds, reptiles, and mammals
+        </div>
+
+    </div>
+
+    <h3>How They Hunt</h3>
+
+    <p>
+        Pythons usually don't need to chase something down. They are ambush
+        hunters and wait for prey to get close. They grab the animal with
+        their teeth and quickly wrap their body around it. Depending on the
+        size of the python, they can eat anything from rodents and birds to
+        much larger animals.
+    </p>
+
+    <h3>Not Every Python Is Huge</h3>
+
+    <p>
+        When I think of a python I usually picture a massive snake, but their
+        size actually depends heavily on the species. Some are fairly small
+        while others can become some of the longest snakes in the world.
+        Pythons also live in a bunch of different environments including
+        rainforests, grasslands, swamps, woodlands, and rocky areas.
+    </p>
+
+</section>
 
 
-    <section id="form">
-        <h2>Favorite Things Survey</h2>
+<section class="snake" id="anaconda">
 
-        <p>Tell me about some of your favorite things.</p>
+    <h2>Anacondas</h2>
 
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <img
+        class="snake-image"
+        src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Sucuri_verde.jpg"
+        alt="Green anaconda snake">
 
-            <label for="place">Favorite Place:</label>
-            <input type="text" id="place" name="place">
+    <p>
+        Anacondas are probably the snake I would least want to randomly see
+        while walking around. They are large constrictors from South America
+        and are really well adapted to being in water. Their eyes and nostrils
+        sit high on their head, which helps them see and breathe while most
+        of their body is underwater.
+    </p>
 
-            <label for="fruit">Favorite Fruit:</label>
-            <select id="fruit" name="fruit">
-                <option value="apple">Apple</option>
-                <option value="grapes">Grapes</option>
-                <option value="peaches">Peaches</option>
-                <option value="other">Other</option>
-            </select>
+    <div class="facts">
 
-            <label for="comments">Why is it your favorite?</label>
-            <textarea id="comments" name="comments" rows="4"></textarea>
+        <div class="fact">
+            <strong>Location</strong><br>
+            South America
+        </div>
 
-            <input type="submit" value="Submit">
-        </form>
-    </section>
+        <div class="fact">
+            <strong>Type</strong><br>
+            Nonvenomous constrictor
+        </div>
+
+        <div class="fact">
+            <strong>Habitat</strong><br>
+            Rivers, streams, and wetlands
+        </div>
+
+    </div>
+
+    <h3>Green Anaconda</h3>
+
+    <p>
+        The green anaconda is one of the largest snakes in the world.
+        Females can become much larger than males and these snakes spend
+        a lot of their time in slow-moving water. Their color also helps
+        them blend in with the vegetation around them.
+    </p>
+
+    <h3>What They Eat</h3>
+
+    <p>
+        Anacondas are carnivores and their diet depends on their size.
+        They can eat fish, birds, turtles, capybaras, caimans, and other
+        animals. Like pythons, they don't use venom to take down their prey.
+    </p>
+
+</section>
+
+
+<section class="comparison" id="comparison">
+
+    <h2>Quick Comparison</h2>
+
+    <table>
+
+        <tr>
+            <th>Snake</th>
+            <th>Where It Lives</th>
+            <th>Venomous?</th>
+            <th>Hunting Method</th>
+        </tr>
+
+        <tr>
+            <td>Black Mamba</td>
+            <td>Eastern and Southern Africa</td>
+            <td>Yes</td>
+            <td>Venom</td>
+        </tr>
+
+        <tr>
+            <td>Python</td>
+            <td>Africa, Asia, Australia</td>
+            <td>No</td>
+            <td>Constriction</td>
+        </tr>
+
+        <tr>
+            <td>Anaconda</td>
+            <td>South America</td>
+            <td>No</td>
+            <td>Constriction</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<section class="survey" id="survey">
+
+    <h2>Which One Would You Pick?</h2>
+
+    <p>
+        Out of these three, which snake do you find the most interesting?
+    </p>
+
+    <form>
+
+        <label for="name">Name:</label>
+
+        <input
+            type="text"
+            id="name"
+            name="name"
+            required>
+
+
+        <label for="snake">Favorite Snake:</label>
+
+        <select id="snake" name="snake">
+
+            <option value="black-mamba">Black Mamba</option>
+            <option value="python">Python</option>
+            <option value="anaconda">Anaconda</option>
+
+        </select>
+
+
+        <label for="reason">
+            Why did you pick that one?
+        </label>
+
+        <textarea
+            id="reason"
+            name="reason"
+            rows="5"></textarea>
+
+
+        <input
+            type="submit"
+            value="Submit">
+
+    </form>
+
+</section>
+
+
+<section class="sources">
+
+    <h2>Sources</h2>
+
+    <p>
+        Black Mamba Information:
+        <a href="https://www.indianapoliszoo.com/animals/cobras-and-mambas/"
+           target="_blank">
+            Indianapolis Zoo
+        </a>
+    </p>
+
+    <p>
+        Python Information:
+        <a href="https://animals.sandiegozoo.org/animals/python"
+           target="_blank">
+            San Diego Zoo
+        </a>
+    </p>
+
+    <p>
+        Green Anaconda Information:
+        <a href="https://nationalzoo.si.edu/animals/green-anaconda"
+           target="_blank">
+            Smithsonian's National Zoo
+        </a>
+    </p>
+
+</section>
 
 </main>
 
 
 <footer>
-    <p>&copy; 2026 My Favorite Things</p>
+    <p>&copy; 2026 Snakes of the World</p>
 </footer>
 
 </body>
+
 </html>
