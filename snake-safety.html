@@ -57,22 +57,25 @@
 
       <h2>Which Snake Interests You?</h2>
 
-      <form>
-         <label for="name">Name:</label>
-         <input type="text" id="name" name="name">
+      <form action="https://formspree.io/f/mbglwpyl" method="POST">
 
-         <label for="favorite">Which snake interests you the most?</label>
-         <select id="favorite" name="favorite">
-            <option>Black Mamba</option>
-            <option>Python</option>
-            <option>Anaconda</option>
-         </select>
+   <label for="name">Name:</label>
+   <input type="text" id="name" name="name" required>
 
-         <label for="reason">Why?</label>
-         <textarea id="reason" name="reason" rows="5"></textarea>
+   <label for="favorite">Which snake interests you the most?</label>
+   <select id="favorite" name="favorite" required>
+      <option value="">Choose a snake</option>
+      <option value="Black Mamba">Black Mamba</option>
+      <option value="Python">Python</option>
+      <option value="Anaconda">Anaconda</option>
+   </select>
 
-         <input type="submit" value="Submit">
-      </form>
+   <label for="reason">Why?</label>
+   <textarea id="reason" name="reason" rows="5" required></textarea>
+
+   <input type="submit" value="Submit">
+
+</form>
 
    </section>
 
