@@ -7,6 +7,7 @@
    <meta name="description" content="Basic information about safely observing snakes and avoiding snake bites.">
    <title>Snake Safety | Snakes of the World</title>
    <link rel="stylesheet" href="styles.css">
+   <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -16,12 +17,13 @@
    <p>Respecting snakes without getting too close.</p>
 </header>
 
-<nav>
+<nav aria-label="Main navigation">
    <a href="index.html">Home</a>
    <a href="black-mamba.html">Black Mamba</a>
    <a href="python.html">Pythons</a>
    <a href="anaconda.html">Anacondas</a>
    <a href="snake-safety.html">Snake Safety</a>
+   <a href="accessibility.html">Accessibility</a>
 </nav>
 
 <main>
@@ -57,25 +59,29 @@
 
       <h2>Which Snake Interests You?</h2>
 
-      <form action="https://formspree.io/f/mbglwpyl" method="POST">
+      <form id="snakeForm"
+            action="https://formspree.io/f/mbglwpyl"
+            method="POST">
 
-   <label for="name">Name:</label>
-   <input type="text" id="name" name="name" required>
+         <label for="name">Name:</label>
+         <input type="text" id="name" name="name" required>
 
-   <label for="favorite">Which snake interests you the most?</label>
-   <select id="favorite" name="favorite" required>
-      <option value="">Choose a snake</option>
-      <option value="Black Mamba">Black Mamba</option>
-      <option value="Python">Python</option>
-      <option value="Anaconda">Anaconda</option>
-   </select>
+         <label for="favorite">Which snake interests you the most?</label>
+         <select id="favorite" name="favorite" required>
+            <option value="">Choose a snake</option>
+            <option value="Black Mamba">Black Mamba</option>
+            <option value="Python">Python</option>
+            <option value="Anaconda">Anaconda</option>
+         </select>
 
-   <label for="reason">Why?</label>
-   <textarea id="reason" name="reason" rows="5" required></textarea>
+         <label for="reason">Why?</label>
+         <textarea id="reason" name="reason" rows="5" required></textarea>
 
-   <input type="submit" value="Submit">
+         <p id="formMessage" role="status" aria-live="polite"></p>
 
-</form>
+         <button type="submit">Submit</button>
+
+      </form>
 
    </section>
 
@@ -87,3 +93,4 @@
 
 </body>
 </html>
+
