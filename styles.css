@@ -270,3 +270,11 @@ footer {
       overflow-wrap: anywhere;
    }
 }
+
+.site-logo {
+   display: block;
+   width: 300px;
+   max-width: 90%;
+   height: auto;
+   margin: 0 auto 15px;
+}
