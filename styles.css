@@ -43,6 +43,12 @@ nav a:hover {
    text-decoration: underline;
 }
 
+nav a:focus-visible,
+.button:focus-visible {
+   outline: 3px solid #79c5ff;
+   outline-offset: 3px;
+}
+
 main {
    max-width: 1050px;
    margin: auto;
@@ -107,6 +113,61 @@ ul {
    padding-left: 25px;
 }
 
+/* Snake comparison table */
+
+table {
+   width: 100%;
+   border-collapse: separate;
+   border-spacing: 0;
+   margin: 25px 0 35px;
+   background-color: white;
+   border: 1px solid #d5dfd8;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+caption {
+   caption-side: top;
+   padding: 14px;
+   font-weight: bold;
+   color: #203d2c;
+   font-size: 17px;
+}
+
+th {
+   background-color: #203d2c;
+   color: white;
+   padding: 15px;
+   text-align: left;
+}
+
+td {
+   padding: 14px 15px;
+   border-bottom: 1px solid #e2e8e3;
+   text-align: left;
+}
+
+tbody tr:nth-child(even) {
+   background-color: #f0f5f1;
+}
+
+tbody tr:last-child td {
+   border-bottom: none;
+}
+
+/* External links */
+
+main a:not(.button) {
+   color: #205d8a;
+}
+
+main a:not(.button):hover {
+   text-decoration: underline;
+}
+
+/* Form styling */
+
 form {
    margin-top: 20px;
 }
@@ -125,21 +186,44 @@ textarea {
    padding: 10px;
    border: 1px solid #aaa;
    border-radius: 4px;
+   font: inherit;
 }
 
-input[type="submit"] {
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+   outline: 2px solid #315b46;
+   outline-offset: 2px;
+}
+
+input[type="submit"],
+form button[type="submit"] {
    margin-top: 15px;
-   padding: 10px 20px;
+   padding: 12px 24px;
    background-color: #1f3b2d;
    color: white;
    border: none;
-   border-radius: 4px;
+   border-radius: 5px;
+   font-size: 15px;
    cursor: pointer;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+form button[type="submit"]:hover {
    background-color: #315b46;
 }
+
+form button[type="submit"]:focus-visible {
+   outline: 3px solid #327dba;
+   outline-offset: 3px;
+}
+
+#formMessage {
+   margin-top: 15px;
+   color: #8b2d20;
+}
+
+/* Footer */
 
 footer {
    text-align: center;
@@ -148,6 +232,8 @@ footer {
    padding: 15px;
    margin-top: 30px;
 }
+
+/* Mobile layout */
 
 @media (max-width: 700px) {
    nav a {
@@ -159,54 +245,28 @@ footer {
       flex-direction: column;
    }
 
+   .snake-card {
+      min-width: 0;
+   }
+
    header h1 {
       font-size: 28px;
    }
-}
 
-/* Snake comparison table */
+   main {
+      padding: 20px 12px;
+   }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    background-color: white;
-}
-
-caption {
-    padding: 12px;
-    font-weight: bold;
-}
-
-th, td {
-    border: 1px solid #cccccc;
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background-color: #214735;
-    color: white;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f0f5f1;
-}
-
-/* External links */
-
-main a:not(.button) {
-    color: #205d8a;
-}
-
-main a:not(.button):hover {
-    text-decoration: underline;
+   .content-page {
+      padding: 18px;
+   }
 }
 
 @media (max-width: 600px) {
-    th, td {
-        padding: 7px;
-        font-size: 13px;
-        overflow-wrap: anywhere;
-    }
+   th,
+   td {
+      padding: 9px 7px;
+      font-size: 12px;
+      overflow-wrap: anywhere;
+   }
 }
