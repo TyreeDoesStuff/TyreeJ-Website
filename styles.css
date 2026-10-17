@@ -163,3 +163,50 @@ footer {
       font-size: 28px;
    }
 }
+
+/* Snake comparison table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+caption {
+    padding: 12px;
+    font-weight: bold;
+}
+
+th, td {
+    border: 1px solid #cccccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #214735;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f5f1;
+}
+
+/* External links */
+
+main a:not(.button) {
+    color: #205d8a;
+}
+
+main a:not(.button):hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    th, td {
+        padding: 7px;
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+}
