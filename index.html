@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,12 +17,13 @@
    <p>Learning about some of the most interesting snakes in the world.</p>
 </header>
 
-<nav>
+<nav aria-label="Main navigation">
    <a href="index.html">Home</a>
    <a href="black-mamba.html">Black Mamba</a>
    <a href="python.html">Pythons</a>
    <a href="anaconda.html">Anacondas</a>
    <a href="snake-safety.html">Snake Safety</a>
+   <a href="accessibility.html">Accessibility</a>
 </nav>
 
 <main>
@@ -79,34 +81,64 @@
 
    </div>
 
-<section>
-    <h2>Snake Comparison</h2>
-    <p>Here is a comparison of the snakes covered on this website.</p>
+   <section>
+      <h2>Snake Comparison</h2>
+      <p>Here is a comparison of the snakes covered on this website.</p>
 
-    <table>
-        <caption>Comparing Different Snakes</caption>
-        <tr>
-            <th scope="col">Snake</th>
-            <th scope="col">Habitat</th>
-            <th scope="col">Venomous</th>
-        </tr>
-        <tr>
-            <td>Black Mamba</td>
-            <td>Africa</td>
-            <td>Yes</td>
-        </tr>
-        <tr>
-            <td>Python</td>
-            <td>Africa, Asia, Australia</td>
-            <td>No</td>
-        </tr>
-        <tr>
-            <td>Anaconda</td>
-            <td>South America</td>
-            <td>No</td>
-        </tr>
-    </table>
-</section>
+      <table>
+         <caption>Comparing Different Snakes</caption>
+         <thead>
+            <tr>
+               <th scope="col">Snake</th>
+               <th scope="col">Habitat</th>
+               <th scope="col">Venomous</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>Black Mamba</td>
+               <td>Africa</td>
+               <td>Yes</td>
+            </tr>
+            <tr>
+               <td>Python</td>
+               <td>Africa, Asia, Australia</td>
+               <td>No</td>
+            </tr>
+            <tr>
+               <td>Anaconda</td>
+               <td>South America</td>
+               <td>No</td>
+            </tr>
+         </tbody>
+      </table>
+   </section>
+
+   <section>
+      <h2>Learn More About Snakes</h2>
+      <p>
+         If you want to learn more about snakes, here are some websites
+         with additional information.
+      </p>
+
+      <ul>
+         <li>
+            <a href="https://www.nationalgeographic.com/animals/reptiles">
+               National Geographic - Reptiles
+            </a>
+         </li>
+         <li>
+            <a href="https://www.britannica.com/animal/snake">
+               Britannica - Snakes
+            </a>
+         </li>
+         <li>
+            <a href="https://www.iucnredlist.org/">
+               IUCN Red List - Conservation
+            </a>
+         </li>
+      </ul>
+   </section>
 
 </main>
 
